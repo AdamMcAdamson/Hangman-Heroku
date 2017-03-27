@@ -59,10 +59,10 @@ for (var i = 0; i < wordGuessDisplay.length; i++) {
 	}	
 }
 
-debugLog("[BASE DEBUG]", "all");
+// debugLog("[BASE DEBUG]", "all");
 
 document.onkeyup = function(event){
-	console.log(event.keyCode)
+	// console.log(event.keyCode)
 	if(event.keyCode > 64 && event.keyCode < 91) {
 		key = String.fromCharCode(event.keyCode).toUpperCase();
 		if(winCondition === true){
@@ -83,13 +83,13 @@ document.onkeyup = function(event){
 
 function checkForKey(key) {
 	if(gameStarted && !gameOver && !winCondition){
-		console.log("checkGuessed: " + checkGuessed(key));
-		console.log("key: " + key);
+		// console.log("checkGuessed: " + checkGuessed(key));
+		// console.log("key: " + key);
 		if(!checkGuessed(key)){
 			for (var i = 0; i < wordGuessAnswer.length; i++) {
 				if (key === wordGuessAnswer[i].toUpperCase()) {
 					wordGuessDisplay[i] = wordGuessAnswer[i];
-					console.log("Correct! One letter is - " + key.toUpperCase());
+					// console.log("Correct! One letter is - " + key.toUpperCase());
 					isCorrectGuess = true;	
 				} 
 			}
@@ -168,7 +168,7 @@ function startGame() {
 
 
 function checkOver() {
-	debugLog("CHECK OVER: ", "word");
+	// debugLog("CHECK OVER: ", "word");
 	if(numGuessesRemaining === 0){
 		gameOver = true;
 		gameStarted = false;
@@ -176,7 +176,7 @@ function checkOver() {
 	}
 	for(var i = 0; i < wordGuessAnswer.length; i++){
 		if(wordGuessAnswer[i] !== wordGuessDisplay[i]){
-			console.log("WINCONDITION FALSE")
+			// console.log("WINCONDITION FALSE")
 			return "nowin";
 		}
 	}
@@ -214,9 +214,9 @@ function updateDisplay(){
 		wrongLettersTag.innerHTML = incorrectGuessedLetters.join(", ");
 		winsTag.innerHTML = "Wins: " + numWins;
 		winWordTag.innerHTML = "You got it! The word was " + wordGuessAnswer.join("") + "!";
-		console.log(wordDirections);
+		// console.log(wordDirections);
 	} else {
-		debugLog("[ERROR] Display Failed: {{updateDisplay() Called Early [From: " + updateDisplay.caller.name + "]}}  \n////// 'haveTagVariables(boolean)' - " + haveTagVariables, "all");
+		// debugLog("[ERROR] Display Failed: {{updateDisplay() Called Early [From: " + updateDisplay.caller.name + "]}}  \n////// 'haveTagVariables(boolean)' - " + haveTagVariables, "all");
 	}
 }
 
@@ -229,7 +229,7 @@ function wrongGuess(key) {
 }
 
 function checkGuessed(key) {
-	console.log("Key Check Guessed");
+	// console.log("Key Check Guessed");
 	if (guessedLetters.includes(key)){
 		return true;
 	}
@@ -305,7 +305,7 @@ function debugLog(custom, logType) {
 				}
 			}
 		} else {
-			console.log("[ERROR] DebugLog Failed: {{Unrecognized logType parameter [From: " + debugName + "]}}");
+			console.log("[ERROR] // debugLog Failed: {{Unrecognized logType parameter [From: " + debugName + "]}}");
 			console.log("////// 'logType(String)' - " + logType);
 		}
 
