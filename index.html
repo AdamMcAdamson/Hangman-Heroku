@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+	<title>Punk Hangman</title>
+    
+</head>
+<body>
+<div id="master-div">
+	<header id="header-jumbo" class=" text-center">
+		<h1 id="header-main">Hangman</h1>
+		<h2 id="header-sub">Gone Punk</h2>
+	</header>
+
+<!-- TODO: Re-Indent -->
+
+	<section id="game-section" class="text-center">
+		<div>
+			<article class="col-md-2"></article>
+
+			<article id="game-container" class="col-md-8 text-center">
+				<div id="game-directions-div">
+					<h3 id="game-directions">Press Any Key To Start!</h3>
+				</div>
+				<div id="game-window">
+					<h3 class="game-info">Current Word:</h3>
+					<h3 id="word-guess-display" class="spacing"></h3>
+					<h3 class="game-info">Number of Guesses Remaining:</h3>
+					<h3 id="num-guesses-remaining"></h3>
+					<h3 class="game-info">Wrong Letters Guessed</h3>
+					<h3 id="wrong-letters"></h3>
+				</div>
+			</article>
+
+			<div id="wins-counter-div" class="col-md-2">
+				<h3 id="wins-display">Wins: 0</h3>
+			</div>
+			<span id="win-span">
+				<h1 id="win-text">YOU WIN!</h1>
+				<img id="win-img" src="http://images4.fanpop.com/image/photos/14900000/Punk-s-not-dead-punk-rock-14926257-500-396.jpg" alt="PUNK IS NOT DEAD">
+				<h3 id="win-word">NULL</h3>
+				<h3 id="win-directions">Press 'C' to Continue</h3>
+			</span>
+			<span id="lose-span">
+				<h1 id="lose-text">YOU LOSE :(</h1>
+				<img id="lose-img" src="https://s-media-cache-ak0.pinimg.com/736x/f4/a0/67/f4a0674899167d502230ab1c58372728.jpg" alt="PUNK IS DEAD">
+				<h3 id="lose-directions">Press 'R' to Restart</h3>
+			</span>
+		</div>
+	</section>
+
+
+</div>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+
+</html>

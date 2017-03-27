@@ -1,0 +1,25 @@
+#win-span {
+	position: absolute;
+	right: 30%;
+	top: 100px;
+	width: 40%;
+	height: auto;
+	visibility: hidden;
+}
+
+#lose-span {
+	position: absolute;
+	right: 30%;
+	top: 100px;
+	width: 40%;
+	height: auto;
+	visibility: hidden;
+}
+
+#game-window {
+	visibility: hidden;
+}
+
+#word-guess-display {
+	letter-spacing: 4px;
+}
